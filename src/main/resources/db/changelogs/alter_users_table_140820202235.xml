@@ -1,0 +1,28 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="200620201939" author="macymuhia">
+        <validCheckSum>8:cab30fc1f9dd1be878e628aa5d3b64d9</validCheckSum>
+        <dropTable tableName="user"/>
+
+        <createTable tableName="users"
+                     remarks="A table to contain all user details">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="user_name" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="email" type="Varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="Varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

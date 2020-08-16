@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <include file="changelogs/first_changelog_150620200812.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/create_expense_table_160620200305.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/alter_users_table_140820202235.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/add_foreign_key_200620201939.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/Add_roles_table_140820202220.xml" relativeToChangelogFile="true"/>
+    <include file="changelogs/add_user_roles_join_table_140820202303.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

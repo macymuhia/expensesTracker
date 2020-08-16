@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="200620201939" author="macymuhia">
+        <validCheckSum>8:b2a0f485eab6215d88f451099ff72234</validCheckSum>
+
+        <addColumn tableName="expenses">
+            <column name="userid" type="bigint">
+                <constraints nullable="true" />
+            </column>
+        </addColumn>
+
+        <addForeignKeyConstraint baseTableName="expenses" baseColumnNames="userid" constraintName="user_fk" referencedTableName="users"
+                                 referencedColumnNames="id" />
+    </changeSet>
+</databaseChangeLog>
